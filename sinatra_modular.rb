@@ -3,10 +3,15 @@ require 'bundler'
 Bundler.require
 
 require 'sinatra/base'
+require 'haml'
 
 class Application < Sinatra::Base
   get '/' do
     erb :index
+  end
+
+  get '/haml' do
+    haml :sample
   end
 
   get '/response' do
